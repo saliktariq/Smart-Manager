@@ -10,5 +10,4 @@ jobs:
     steps:
       - checkout
       - run:
-name: Download Dependencies
-      command: sudo chmod +x ./gradlew
+          command: sudo chmod +x ./gradlew
