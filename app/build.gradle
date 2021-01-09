@@ -49,8 +49,7 @@ android {
 dependencies {
     def room_version = "2.2.5"
     implementation "androidx.room:room-runtime:$room_version"
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     testImplementation 'junit:junit:4.12'
@@ -60,8 +59,10 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui:2.3.2'
     //Adding sendgrid dependencies to send emails
     implementation 'com.sendgrid:sendgrid-java:4.0.1'
+        //JavaX Mail dependencies
+        implementation 'com.sun.mail:android-mail:1.6.0'
+        implementation 'com.sun.mail:android-activation:1.6.0'
+// https://mvnrepository.com/artifact/com.google.http-client/google-http-client
+//    compile group: 'com.google.http-client', name: 'google-http-client', version: '1.38.0'
 
-//    //JavaX Mail dependencies
-//    implementation 'com.sun.mail:android-mail:1.6.0'
-//    implementation 'com.sun.mail:android-activation:1.6.0'
 }
