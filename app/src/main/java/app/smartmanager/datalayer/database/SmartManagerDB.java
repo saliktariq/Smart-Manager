@@ -20,11 +20,11 @@ import app.smartmanager.helper.MyApplication;
 
         private static volatile SmartManagerDB INSTANCE;
         private static final int NO_OF_THREADS = 4;
-        static final ExecutorService databaseWriteExecutor =
+        public static final ExecutorService databaseWriteExecutor =
                 Executors.newFixedThreadPool(NO_OF_THREADS);
 
         // Creating a SINGLETON of the Database class
-        static SmartManagerDB getDatabase(final Context context){
+        public static SmartManagerDB getDatabase(final Context context){
             if(INSTANCE == null) {
                 //Making sure the database class is synchronised among all instances
                 synchronized (SmartManagerDB.class){
