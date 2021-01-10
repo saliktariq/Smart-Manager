@@ -19,6 +19,7 @@ public class Repository {
     Repository(Application app){
         SmartManagerDB database = SmartManagerDB.getDatabase(app);
         probeDao = database.probeDao();
+        //LiveData object in constructor to continuously observe changes in the database
         liveProbeData = probeDao.liveProbeData();
     }
 
