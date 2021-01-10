@@ -17,20 +17,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button sendMailButton = (Button) findViewById(R.id.btnSendMail);
-        sendMailButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Handler handler = new Handler(Looper.getMainLooper());
-                handler.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        SendMail email = new SendMail(MyApplication.getContext(),"saliktariq@icloud.com","SmartManager","This is a test");
-                        email.execute();
-                    }
-                });
-            }
-        });
     }
 
 }
