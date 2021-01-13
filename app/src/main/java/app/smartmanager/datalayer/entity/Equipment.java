@@ -10,7 +10,6 @@ public class Equipment {
     @PrimaryKey(autoGenerate = true)
     @NonNull
     private int equipmentID;
-
     private String equipmentName;
     private boolean criticalControlRequired;
 

@@ -4,7 +4,7 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity
-public class ProductList {
+public class Product {
 
     @PrimaryKey(autoGenerate = true)
     private int productID;
@@ -13,7 +13,7 @@ public class ProductList {
     private boolean criticalControlRequired;
     private int quantityPerUnitReceived;
 
-    public ProductList(int productID, int associatedSupplierID, String productName, boolean criticalControlRequired, int quantityPerUnitReceived) {
+    public Product(int productID, int associatedSupplierID, String productName, boolean criticalControlRequired, int quantityPerUnitReceived) {
         this.productID = productID;
         this.associatedSupplierID = associatedSupplierID;
         this.productName = productName;

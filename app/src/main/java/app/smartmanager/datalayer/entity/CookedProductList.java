@@ -8,19 +8,16 @@ public class CookedProductList {
 
     @PrimaryKey(autoGenerate = true)
     private int cookedProductListID;
-    private int cookedProductID;
+    private int associatedProductID;
 
-    public CookedProductList(int cookedProductListID, int cookedProductID) {
+    public CookedProductList(int cookedProductListID, int associatedProductID) {
         this.cookedProductListID = cookedProductListID;
-        this.cookedProductID = cookedProductID;
+        this.associatedProductID = associatedProductID;
 
     }
 
     public int getCookedProductListID() {
         return cookedProductListID;
     }
-
-    public int getCookedProductID() {
-        return cookedProductID;
-    }
+    public int getAssociatedProductID() { return associatedProductID;}
 }

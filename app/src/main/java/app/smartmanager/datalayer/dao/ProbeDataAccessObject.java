@@ -10,7 +10,7 @@ import androidx.room.Transaction;
 import java.util.List;
 
 import app.smartmanager.datalayer.entity.Probe;
-import app.smartmanager.datalayer.relationalobjects.ProbeWithAssociatedTemperatures;
+import app.smartmanager.datalayer.relationalobjects.ProbeToProbeTemperature;
 
 @Dao
 public interface ProbeDataAccessObject {
@@ -30,5 +30,5 @@ public interface ProbeDataAccessObject {
     //Method to retrieve all temperature data associated to a probeID
     @Transaction
     @Query("SELECT * from Probe WHERE probeID LIKE :probeID")
-    List<ProbeWithAssociatedTemperatures> getTemperatureDataForProbe(int probeID);
+    List<ProbeToProbeTemperature> getTemperatureDataForProbe(int probeID);
 }

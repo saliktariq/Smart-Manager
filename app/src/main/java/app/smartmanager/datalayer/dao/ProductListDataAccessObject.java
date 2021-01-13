@@ -7,16 +7,16 @@ import androidx.room.Query;
 
 import java.util.List;
 
-import app.smartmanager.datalayer.entity.ProductList;
+import app.smartmanager.datalayer.entity.Product;
 
 @Dao
 public interface ProductListDataAccessObject {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    void insert(ProductList productList);
+    void insert(Product product);
 
-    @Query("DELETE FROM ProductList")
+    @Query("DELETE FROM Product")
     void deleteAll();
 
-    @Query("SELECT * FROM ProductList ORDER BY productID ASC")
-    List<ProductList> getAllProductListData();
+    @Query("SELECT * FROM Product ORDER BY productID ASC")
+    List<Product> getAllProductListData();
 }

@@ -12,7 +12,7 @@ import app.smartmanager.datalayer.entity.ProbeTemperature;
  * Object to retrieve all ProbeTemperature data
  * associated to a particular probeID
  */
-public class ProbeWithAssociatedTemperatures {
+public class ProbeToProbeTemperature {
     @Embedded public Probe probe;
     @Relation(
             parentColumn = "probeID",

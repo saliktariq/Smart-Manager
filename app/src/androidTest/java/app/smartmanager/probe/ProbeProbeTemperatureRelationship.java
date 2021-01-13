@@ -1,7 +1,6 @@
 package app.smartmanager.probe;
 
 import android.content.Context;
-import android.util.Log;
 
 import androidx.room.Room;
 import androidx.test.core.app.ApplicationProvider;
@@ -23,7 +22,7 @@ import app.smartmanager.datalayer.dao.ProbeTemperatureDataAccessObject;
 import app.smartmanager.datalayer.database.SmartManagerDB;
 import app.smartmanager.datalayer.entity.Probe;
 import app.smartmanager.datalayer.entity.ProbeTemperature;
-import app.smartmanager.datalayer.relationalobjects.ProbeWithAssociatedTemperatures;
+import app.smartmanager.datalayer.relationalobjects.ProbeToProbeTemperature;
 
 @RunWith(AndroidJUnit4.class)
 public class ProbeProbeTemperatureRelationship {
@@ -63,9 +62,9 @@ public class ProbeProbeTemperatureRelationship {
         probeTemperatureDao.insert(probeTemperature2);
         probeTemperatureDao.insert(probeTemperature3);
 
-        List<ProbeWithAssociatedTemperatures> resultRetrieved = probeDao.getTemperatureDataForProbe(1);
+        List<ProbeToProbeTemperature> resultRetrieved = probeDao.getTemperatureDataForProbe(1);
         ArrayList<Double> resultSet = new ArrayList<Double>();
-        for(ProbeWithAssociatedTemperatures entries: resultRetrieved){
+        for(ProbeToProbeTemperature entries: resultRetrieved){
             for(ProbeTemperature temp: entries.temperatures){
                 resultSet.add(temp.getTemperature());
             }
