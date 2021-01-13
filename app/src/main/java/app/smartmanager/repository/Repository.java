@@ -1,11 +1,8 @@
 package app.smartmanager.repository;
 
 import android.app.Application;
-
 import androidx.lifecycle.LiveData;
-
 import java.util.List;
-
 import app.smartmanager.datalayer.dao.ProbeDataAccessObject;
 import app.smartmanager.datalayer.database.SmartManagerDB;
 import app.smartmanager.datalayer.entity.Probe;

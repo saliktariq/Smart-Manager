@@ -3,14 +3,16 @@ package app.smartmanager.datalayer.entity;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import app.smartmanager.helper.enums.CheckType;
+
 @Entity
 public class MandatoryChecks {
     @PrimaryKey(autoGenerate = true)
     private int mandatoryChecksID;
-    private int checkType; //1: Opening Checks 2: Closing Checks
+    private CheckType checkType;
     private String checkDescription;
 
-    public MandatoryChecks(int mandatoryChecksID, int checkType, String checkDescription) {
+    public MandatoryChecks(int mandatoryChecksID, CheckType checkType, String checkDescription) {
         this.mandatoryChecksID = mandatoryChecksID;
         this.checkType = checkType;
         this.checkDescription = checkDescription;
@@ -20,7 +22,7 @@ public class MandatoryChecks {
         return mandatoryChecksID;
     }
 
-    public int getCheckType() {
+    public CheckType getCheckType() {
         return checkType;
     }
 

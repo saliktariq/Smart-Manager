@@ -4,6 +4,7 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 import app.smartmanager.helper.DateTime;
+import app.smartmanager.helper.enums.Frequency;
 
 @Entity
 public class Inventory {
@@ -14,9 +15,9 @@ public class Inventory {
     private int associatedProductID;
     private int associatedUserID;
     private DateTime dateTime;
-    private int inventoryType; // 1: Daily 2: Weekly
+    private Frequency inventoryType;
 
-    public Inventory(int inventoryRecordID, int associatedProductID, int associatedUserID, DateTime dateTime, int inventoryType) {
+    public Inventory(int inventoryRecordID, int associatedProductID, int associatedUserID, DateTime dateTime, Frequency inventoryType) {
         this.inventoryRecordID = inventoryRecordID;
         this.associatedProductID = associatedProductID;
         this.associatedUserID = associatedUserID;
@@ -40,7 +41,7 @@ public class Inventory {
         return dateTime;
     }
 
-    public int getInventoryType() {
+    public Frequency getInventoryType() {
         return inventoryType;
     }
 }

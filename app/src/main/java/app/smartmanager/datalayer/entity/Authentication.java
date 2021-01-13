@@ -3,12 +3,14 @@ package app.smartmanager.datalayer.entity;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import app.smartmanager.helper.enums.AccessLevel;
+
 @Entity
 public class Authentication {
 
     @PrimaryKey(autoGenerate = true)
     private int userID;
-    private int accessLevel;
+    private AccessLevel accessLevel;
     private String firstName;
     private String lastName;
     private String emailAddress;
@@ -16,7 +18,7 @@ public class Authentication {
     private long accountAuthenticationCode;
     private long password;
 
-    public Authentication(int userID, int accessLevel, String firstName, String lastName, String emailAddress, String phoneNumber, long accountAuthenticationCode, long password) {
+    public Authentication(int userID, AccessLevel accessLevel, String firstName, String lastName, String emailAddress, String phoneNumber, long accountAuthenticationCode, long password) {
         this.userID = userID;
         this.accessLevel = accessLevel;
         this.firstName = firstName;
@@ -31,7 +33,7 @@ public class Authentication {
         return userID;
     }
 
-    public int getAccessLevel() {
+    public AccessLevel getAccessLevel() {
         return accessLevel;
     }
 

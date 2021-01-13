@@ -3,6 +3,8 @@ package app.smartmanager.datalayer.entity;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import app.smartmanager.helper.enums.Frequency;
+
 @Entity
 public class CleaningTask {
 
@@ -10,9 +12,9 @@ public class CleaningTask {
     private int taskID;
     private String description;
     private int associatedEquipmentID; //Optional
-    private int taskFrequency; // 0: Optional 1: Daily 7: Weekly
+    private Frequency taskFrequency; //
 
-    public CleaningTask(int taskID, String description, int associatedEquipmentID, int taskFrequency) {
+    public CleaningTask(int taskID, String description, int associatedEquipmentID, Frequency taskFrequency) {
         this.taskID = taskID;
         this.description = description;
         this.associatedEquipmentID = associatedEquipmentID;
@@ -31,7 +33,7 @@ public class CleaningTask {
         return associatedEquipmentID;
     }
 
-    public int getTaskFrequency() {
+    public Frequency getTaskFrequency() {
         return taskFrequency;
     }
 }

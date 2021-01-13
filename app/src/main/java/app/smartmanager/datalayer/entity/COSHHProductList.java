@@ -7,24 +7,24 @@ import androidx.room.PrimaryKey;
 public class COSHHProductList {
 
     @PrimaryKey(autoGenerate = true)
-    private int COSHHProductID;
-    private int COSHHProductName;
+    private int coshhproductid;
+    private int coshhproductname;
     private String usage;
     private String concentration;
 
-    public COSHHProductList(int COSHHProductID, int COSHHProductName, String usage, String concentration) {
-        this.COSHHProductID = COSHHProductID;
-        this.COSHHProductName = COSHHProductName;
+    public COSHHProductList(int coshhProductID, int coshhproductname, String usage, String concentration) {
+        this.coshhproductid = coshhProductID;
+        this.coshhproductname = coshhproductname;
         this.usage = usage;
         this.concentration = concentration;
     }
 
-    public int getCOSHHProductID() {
-        return COSHHProductID;
+    public int getCoshhproductid() {
+        return coshhproductid;
     }
 
-    public int getCOSHHProductName() {
-        return COSHHProductName;
+    public int getCoshhproductname() {
+        return coshhproductname;
     }
 
     public String getUsage() {

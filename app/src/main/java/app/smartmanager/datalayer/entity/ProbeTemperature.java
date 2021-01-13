@@ -1,24 +1,22 @@
 package app.smartmanager.datalayer.entity;
 
 import androidx.annotation.NonNull;
-import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 import app.smartmanager.helper.DateTime;
+import app.smartmanager.helper.enums.ProbeCalibrationMethod;
 
 @Entity
 public class ProbeTemperature {
     @PrimaryKey(autoGenerate = true)
     private int ptID;
 
-    @NonNull
     private int associatedProbeID;
 
-    @NonNull
     private int associatedUserID;
 
-    private String testMethod;
+    private ProbeCalibrationMethod probeCalibrationMethod;
 
     private float temperature;
 
@@ -26,11 +24,11 @@ public class ProbeTemperature {
 
     private DateTime dateTime; //Signature DateTime(int minute, int hour, int day, int month, int year)
 
-    public ProbeTemperature(int ptID, int associatedProbeID, int associatedUserID, String testMethod, float temperature, String temperatureUnit, DateTime dateTime) {
+    public ProbeTemperature(int ptID, int associatedProbeID, int associatedUserID, ProbeCalibrationMethod probeCalibrationMethod, float temperature, String temperatureUnit, DateTime dateTime) {
         this.ptID = ptID;
         this.associatedProbeID = associatedProbeID;
         this.associatedUserID = associatedUserID;
-        this.testMethod = testMethod;
+        this.probeCalibrationMethod = probeCalibrationMethod;
         this.temperature = temperature;
         this.temperatureUnit = temperatureUnit;
         this.dateTime = dateTime;
@@ -48,8 +46,8 @@ public class ProbeTemperature {
         return associatedUserID;
     }
 
-    public String getTestMethod() {
-        return testMethod;
+    public ProbeCalibrationMethod getProbeCalibrationMethod() {
+        return probeCalibrationMethod;
     }
 
     public float getTemperature() {

@@ -8,23 +8,23 @@ import app.smartmanager.helper.DateTime;
 @Entity
 public class EquipmentTemperature {
     @PrimaryKey(autoGenerate = true)
-    private int equiTemperatureID;
+    private int equipTemperatureID;
 
     private int associatedEquipmentID;
     private float temperature;
     private int associatedUserID;
     private DateTime dateTime;
 
-    public EquipmentTemperature(int equiTemperatureID, int associatedEquipmentID, float temperature, int associatedUserID, DateTime dateTime) {
-        this.equiTemperatureID = equiTemperatureID;
+    public EquipmentTemperature(int equipTemperatureID, int associatedEquipmentID, float temperature, int associatedUserID, DateTime dateTime) {
+        this.equipTemperatureID = equipTemperatureID;
         this.associatedEquipmentID = associatedEquipmentID;
         this.temperature = temperature;
         this.associatedUserID = associatedUserID;
         this.dateTime = dateTime;
     }
 
-    public int getEquiTemperatureID() {
-        return equiTemperatureID;
+    public int getEquipTemperatureID() {
+        return equipTemperatureID;
     }
 
     public int getAssociatedEquipmentID() {
