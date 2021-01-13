@@ -5,6 +5,8 @@ import android.content.Context;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
+
+import app.smartmanager.datalayer.dao.ProbeTemperatureDataAccessObject;
 import app.smartmanager.helper.TypeConverter;
 import androidx.room.TypeConverters;
 
@@ -22,6 +24,7 @@ import app.smartmanager.helper.MyApplication;
     public abstract class SmartManagerDB extends RoomDatabase {
 
         public abstract ProbeDataAccessObject probeDao();
+        public abstract ProbeTemperatureDataAccessObject probeTemperatureDao();
 
         private static volatile SmartManagerDB INSTANCE;
         private static final int NO_OF_THREADS = 4;

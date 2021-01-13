@@ -1,5 +1,7 @@
 package app.smartmanager.probe;
 import android.content.Context;
+import android.util.Log;
+
 import androidx.room.Room;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
@@ -33,7 +35,8 @@ public class InsertAndRetrieveProbe {
     }
 
     @Test
-    public void insertAndRetrieveProbe() throws Exception{
+    public void insertAndRetrieveProbeTest() throws Exception{
+        probeDao.deleteAll();
         Probe probe = new Probe(0,"WHITE COLOR","White");
         probeDao.insert(probe);
         List<Probe> result = probeDao.getAllProbeData();

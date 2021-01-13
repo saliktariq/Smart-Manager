@@ -13,11 +13,11 @@ public class EquipmentTemperature {
     private int equipTemperatureID;
 
     private int associatedEquipmentID;
-    private float temperature;
+    private double temperature;
     private int associatedUserID;
     private Date dateTime;
 
-    public EquipmentTemperature(int equipTemperatureID, int associatedEquipmentID, float temperature, int associatedUserID, Date dateTime) {
+    public EquipmentTemperature(int equipTemperatureID, int associatedEquipmentID, double temperature, int associatedUserID, Date dateTime) {
         this.equipTemperatureID = equipTemperatureID;
         this.associatedEquipmentID = associatedEquipmentID;
         this.temperature = temperature;
@@ -33,7 +33,7 @@ public class EquipmentTemperature {
         return associatedEquipmentID;
     }
 
-    public float getTemperature() {
+    public double getTemperature() {
         return temperature;
     }
 

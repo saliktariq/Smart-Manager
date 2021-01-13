@@ -13,10 +13,10 @@ public class ProductTemperature {
     private int productTemperatureID;
     private int associatedProductID;
     private int associatedUserID;
-    private float temperature;
+    private double temperature;
     private Date dateTime;
 
-    public ProductTemperature(int productTemperatureID, int associatedProductID, int associatedUserID, float temperature, Date dateTime) {
+    public ProductTemperature(int productTemperatureID, int associatedProductID, int associatedUserID, double temperature, Date dateTime) {
         this.productTemperatureID = productTemperatureID;
         this.associatedProductID = associatedProductID;
         this.associatedUserID = associatedUserID;
@@ -36,7 +36,7 @@ public class ProductTemperature {
         return associatedUserID;
     }
 
-    public float getTemperature() {
+    public double getTemperature() {
         return temperature;
     }
 

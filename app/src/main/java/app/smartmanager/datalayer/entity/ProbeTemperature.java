@@ -19,13 +19,13 @@ public class ProbeTemperature {
 
     private int probeCalibrationMethod;
 
-    private float temperature;
+    private double temperature;
 
     private String temperatureUnit;
 
     private Date dateTime;
 
-    public ProbeTemperature(int ptID, int associatedProbeID, int associatedUserID, int probeCalibrationMethod, float temperature, String temperatureUnit, Date dateTime) {
+    public ProbeTemperature(int ptID, int associatedProbeID, int associatedUserID, int probeCalibrationMethod, double temperature, String temperatureUnit, Date dateTime) {
         this.ptID = ptID;
         this.associatedProbeID = associatedProbeID;
         this.associatedUserID = associatedUserID;
@@ -51,7 +51,7 @@ public class ProbeTemperature {
         return probeCalibrationMethod;
     }
 
-    public float getTemperature() {
+    public double getTemperature() {
         return temperature;
     }
 
