@@ -3,6 +3,8 @@ package app.smartmanager.datalayer.entity;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.util.Date;
+
 import app.smartmanager.helper.DateTime;
 
 @Entity
@@ -12,9 +14,9 @@ public class ProductTemperature {
     private int associatedProductID;
     private int associatedUserID;
     private float temperature;
-    private DateTime dateTime;
+    private Date dateTime;
 
-    public ProductTemperature(int productTemperatureID, int associatedProductID, int associatedUserID, float temperature, DateTime dateTime) {
+    public ProductTemperature(int productTemperatureID, int associatedProductID, int associatedUserID, float temperature, Date dateTime) {
         this.productTemperatureID = productTemperatureID;
         this.associatedProductID = associatedProductID;
         this.associatedUserID = associatedUserID;
@@ -38,7 +40,7 @@ public class ProductTemperature {
         return temperature;
     }
 
-    public DateTime getDateTime() {
+    public Date getDateTime() {
         return dateTime;
     }
 }

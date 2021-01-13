@@ -5,15 +5,20 @@ import android.content.Context;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
+import app.smartmanager.helper.TypeConverter;
+import androidx.room.TypeConverters;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import app.smartmanager.datalayer.dao.ProbeDataAccessObject;
 import app.smartmanager.datalayer.entity.Probe;
+import app.smartmanager.datalayer.entity.ProbeTemperature;
 import app.smartmanager.helper.MyApplication;
 
 //Implementation following https://developer.android.com/codelabs/android-room-with-a-view#7
 
-@Database(entities = {Probe.class}, version = 1, exportSchema = false)
+@Database(entities = {Probe.class, ProbeTemperature.class}, version = 1, exportSchema = false)
+@TypeConverters({TypeConverter.class})
     public abstract class SmartManagerDB extends RoomDatabase {
 
         public abstract ProbeDataAccessObject probeDao();

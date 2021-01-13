@@ -3,6 +3,8 @@ package app.smartmanager.datalayer.entity;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.util.Date;
+
 import app.smartmanager.helper.DateTime;
 import app.smartmanager.helper.enums.Frequency;
 
@@ -14,10 +16,10 @@ public class Inventory {
 
     private int associatedProductID;
     private int associatedUserID;
-    private DateTime dateTime;
-    private Frequency inventoryType;
+    private Date dateTime;
+    private int inventoryType; //Implement values from ENUM FREQUENCY
 
-    public Inventory(int inventoryRecordID, int associatedProductID, int associatedUserID, DateTime dateTime, Frequency inventoryType) {
+    public Inventory(int inventoryRecordID, int associatedProductID, int associatedUserID, Date dateTime, int inventoryType) {
         this.inventoryRecordID = inventoryRecordID;
         this.associatedProductID = associatedProductID;
         this.associatedUserID = associatedUserID;
@@ -37,11 +39,11 @@ public class Inventory {
         return associatedUserID;
     }
 
-    public DateTime getDateTime() {
+    public Date getDateTime() {
         return dateTime;
     }
 
-    public Frequency getInventoryType() {
+    public int getInventoryType() {
         return inventoryType;
     }
 }

@@ -3,6 +3,8 @@ package app.smartmanager.datalayer.entity;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.util.Date;
+
 import app.smartmanager.helper.DateTime;
 
 @Entity
@@ -13,9 +15,9 @@ public class EquipmentTemperature {
     private int associatedEquipmentID;
     private float temperature;
     private int associatedUserID;
-    private DateTime dateTime;
+    private Date dateTime;
 
-    public EquipmentTemperature(int equipTemperatureID, int associatedEquipmentID, float temperature, int associatedUserID, DateTime dateTime) {
+    public EquipmentTemperature(int equipTemperatureID, int associatedEquipmentID, float temperature, int associatedUserID, Date dateTime) {
         this.equipTemperatureID = equipTemperatureID;
         this.associatedEquipmentID = associatedEquipmentID;
         this.temperature = temperature;
@@ -39,7 +41,7 @@ public class EquipmentTemperature {
         return associatedUserID;
     }
 
-    public DateTime getDateTime() {
+    public Date getDateTime() {
         return dateTime;
     }
 }

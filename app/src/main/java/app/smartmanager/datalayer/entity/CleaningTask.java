@@ -12,9 +12,9 @@ public class CleaningTask {
     private int taskID;
     private String description;
     private int associatedEquipmentID; //Optional
-    private Frequency taskFrequency; //
+    private int taskFrequency; //Implement values from Frequency ENUM
 
-    public CleaningTask(int taskID, String description, int associatedEquipmentID, Frequency taskFrequency) {
+    public CleaningTask(int taskID, String description, int associatedEquipmentID, int taskFrequency) {
         this.taskID = taskID;
         this.description = description;
         this.associatedEquipmentID = associatedEquipmentID;
@@ -33,7 +33,7 @@ public class CleaningTask {
         return associatedEquipmentID;
     }
 
-    public Frequency getTaskFrequency() {
+    public int getTaskFrequency() {
         return taskFrequency;
     }
 }

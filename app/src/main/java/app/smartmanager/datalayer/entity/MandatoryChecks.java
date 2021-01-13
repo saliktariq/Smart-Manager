@@ -9,10 +9,10 @@ import app.smartmanager.helper.enums.CheckType;
 public class MandatoryChecks {
     @PrimaryKey(autoGenerate = true)
     private int mandatoryChecksID;
-    private CheckType checkType;
+    private int checkType; //Implement values from ENUM CheckType
     private String checkDescription;
 
-    public MandatoryChecks(int mandatoryChecksID, CheckType checkType, String checkDescription) {
+    public MandatoryChecks(int mandatoryChecksID, int checkType, String checkDescription) {
         this.mandatoryChecksID = mandatoryChecksID;
         this.checkType = checkType;
         this.checkDescription = checkDescription;
@@ -22,7 +22,7 @@ public class MandatoryChecks {
         return mandatoryChecksID;
     }
 
-    public CheckType getCheckType() {
+    public int getCheckType() {
         return checkType;
     }
 

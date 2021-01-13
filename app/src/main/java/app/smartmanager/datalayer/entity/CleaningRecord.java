@@ -3,6 +3,8 @@ package app.smartmanager.datalayer.entity;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.util.Date;
+
 import app.smartmanager.helper.DateTime;
 
 @Entity
@@ -12,9 +14,9 @@ public class CleaningRecord {
     private int cleaningRecordID;
     private int associatedTaskID;
     private int associatedUserID;
-    private DateTime dateTime;
+    private Date dateTime;
 
-    public CleaningRecord(int cleaningRecordID, int associatedTaskID, int associatedUserID, DateTime dateTime) {
+    public CleaningRecord(int cleaningRecordID, int associatedTaskID, int associatedUserID, Date dateTime) {
         this.cleaningRecordID = cleaningRecordID;
         this.associatedTaskID = associatedTaskID;
         this.associatedUserID = associatedUserID;
@@ -33,7 +35,7 @@ public class CleaningRecord {
         return associatedUserID;
     }
 
-    public DateTime getDateTime() {
+    public Date getDateTime() {
         return dateTime;
     }
 }

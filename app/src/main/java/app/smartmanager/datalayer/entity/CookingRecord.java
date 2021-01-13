@@ -14,10 +14,10 @@ public class CookingRecord {
     private int cookingRecordID;
     private int associatedProductID; //Can be associatedCookedProductID? If not, do I need CookedProductList?
     private int quantityCooked;
-    private DateTime cookedTime;
-    private DateTime expiredTime;
+    private Date cookedTime;
+    private Date expiredTime;
 
-    public CookingRecord(int cookingRecordID, int associatedProductID, int quantityCooked, DateTime cookedTime, DateTime expiredTime) {
+    public CookingRecord(int cookingRecordID, int associatedProductID, int quantityCooked, Date cookedTime, Date expiredTime) {
         this.cookingRecordID = cookingRecordID;
         this.associatedProductID = associatedProductID;
         this.quantityCooked = quantityCooked;
@@ -37,11 +37,11 @@ public class CookingRecord {
         return quantityCooked;
     }
 
-    public DateTime getCookedTime() {
+    public Date getCookedTime() {
         return cookedTime;
     }
 
-    public DateTime getExpiredTime() {
+    public Date getExpiredTime() {
         return expiredTime;
     }
 }
