@@ -83,6 +83,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/username"
+                        android:textSize="@dimen/largeFont"
                         android:textAlignment="viewStart" />
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -94,6 +95,7 @@
                             android:id="@+id/username"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:textSize="@dimen/largeFont"
                             android:backgroundTint="#CFE1F3"
                             android:maxLines="1"
                             android:textAlignment="viewStart" />
@@ -102,6 +104,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textSize="@dimen/largeFont"
                         android:layout_marginTop="@dimen/largeMargin"
                         android:text="@string/password"
                         android:textAlignment="viewStart" />
@@ -118,6 +121,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:backgroundTint="#CFE1F3"
+                            android:textSize="@dimen/largeFont"
                             android:inputType="textPassword"
                             android:maxLines="1"
                             android:textAlignment="viewStart" />
