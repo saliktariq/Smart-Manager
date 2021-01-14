@@ -8,4 +8,6 @@
     <string name="forgot_password">Forgot password?</string>
     <string name="get_new">Get new</string>
     <string name="smart_manager_logo">Smart Manager Logo</string>
+    <string name="icon">Icon</string>
+    <string name="register_new_account">Register new account</string>
 </resources>

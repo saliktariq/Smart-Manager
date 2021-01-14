@@ -2,4 +2,6 @@
 <resources>
     <attr name="colorBgPrimary" format="reference"/>
     <attr name="colorBgDark" format="reference"/>
+    <attr name="colorButtonPrimary" format="reference"/>
+
 </resources>

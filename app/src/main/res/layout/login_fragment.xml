@@ -60,7 +60,7 @@
                 android:id="@+id/imageLogoMain"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:contentDescription="@string/smart_manager_logo"
+                android:contentDescription="@string/icon"
                 android:src="@drawable/logo400px"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -92,6 +92,12 @@
                         android:textSize="@dimen/largeFont" />
 
                     <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/userNameField"
+                        app:errorEnabled="true"
+                        app:helperTextEnabled="true"
+                        app:helperText="Minimum length: 8"
+                        app:counterEnabled="true"
+                        app:counterMaxLength="64"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:hintEnabled="false">
@@ -115,6 +121,12 @@
                         android:textSize="@dimen/largeFont" />
 
                     <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/passwordField"
+                        app:errorEnabled="true"
+                        app:helperTextEnabled="true"
+                        app:helperText="Minimum length: 8"
+                        app:counterEnabled="true"
+                        app:counterMaxLength="64"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:hintEnabled="false"
