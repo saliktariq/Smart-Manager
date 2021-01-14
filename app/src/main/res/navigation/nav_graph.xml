@@ -9,5 +9,67 @@
         android:id="@+id/login"
         android:name="app.smartmanager.ui.authentication.Login"
         android:label="login_fragment"
-        tools:layout="@layout/login_fragment" />
+        tools:layout="@layout/login_fragment" >
+        <action
+            android:id="@+id/action_login_to_homeScreen"
+            app:destination="@id/homeScreen" />
+        <action
+            android:id="@+id/action_login_to_forgetPassword"
+            app:destination="@id/forgetPassword" />
+        <action
+            android:id="@+id/action_login_to_registerNewAccount"
+            app:destination="@id/registerNewAccount" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerNewAccount"
+        android:name="app.smartmanager.ui.authentication.RegisterNewAccount"
+        android:label="RegisterNewAccount"
+        tools:layout="@layout/register_new_account_fragment" >
+        <action
+            android:id="@+id/action_registerNewAccount_to_forgetPassword"
+            app:destination="@id/forgetPassword" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgetPassword"
+        android:name="app.smartmanager.ui.authentication.ForgetPassword"
+        android:label="ForgetPassword"
+        tools:layout="@layout/forget_password_fragment" >
+        <action
+            android:id="@+id/action_forgetPassword_to_updatePassword"
+            app:destination="@id/updatePassword" />
+        <action
+            android:id="@+id/action_forgetPassword_to_registerNewAccount"
+            app:destination="@id/registerNewAccount" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateProfile"
+        android:name="app.smartmanager.ui.authentication.UpdateProfile"
+        android:label="UpdateProfile"
+        tools:layout="@layout/update_profile_fragment">
+        <action
+            android:id="@+id/action_updateProfile_to_homeScreen"
+            app:destination="@id/homeScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeScreen"
+        android:name="app.smartmanager.ui.home.HomeScreen"
+        android:label="HomeScreen"
+        tools:layout="@layout/home_screen_fragment" >
+        <action
+            android:id="@+id/action_homeScreen_to_updateProfile"
+            app:destination="@id/updateProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/updatePassword"
+        android:name="app.smartmanager.ui.authentication.UpdatePassword"
+        android:label="UpdatePassword"
+        tools:layout="@layout/update_password_fragment" >
+        <action
+            android:id="@+id/action_updatePassword_to_registerNewAccount"
+            app:destination="@id/registerNewAccount" />
+        <action
+            android:id="@+id/action_updatePassword_to_forgetPassword"
+            app:destination="@id/forgetPassword" />
+    </fragment>
+    <action android:id="@+id/action_global_login" app:destination="@id/login" />
 </navigation>

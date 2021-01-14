@@ -29,7 +29,6 @@ public class UpdateProfile extends Fragment {
         View view = binding.getRoot();
         updateProfileViewModel = new ViewModelProvider(requireActivity()).get(UpdateProfileViewModel.class);
         return view;
-
     }
 
     @Override
