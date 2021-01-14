@@ -1,5 +1,6 @@
 package app.smartmanager.ui.authentication;
 
+import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 
 import android.os.Bundle;
@@ -13,26 +14,26 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import app.smartmanager.R;
+import app.smartmanager.databinding.UpdatePasswordFragmentBinding;
 
 public class UpdatePassword extends Fragment {
 
-    private UpdatePasswordViewModel mViewModel;
-
-    public static UpdatePassword newInstance() {
-        return new UpdatePassword();
-    }
+    private UpdatePasswordViewModel updatePasswordViewModel;
+    private UpdatePasswordFragmentBinding binding;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.update_password_fragment, container, false);
+        binding = UpdatePasswordFragmentBinding.inflate(inflater,container, false);
+        View view = binding.getRoot();
+        updatePasswordViewModel = new ViewModelProvider(requireActivity()).get(UpdatePasswordViewModel.class);
+        return view;
     }
 
     @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(UpdatePasswordViewModel.class);
-        // TODO: Use the ViewModel
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
     }
 
 }

@@ -1,7 +1,18 @@
 package app.smartmanager.ui.authentication;
 
-import androidx.lifecycle.ViewModel;
+import android.app.Application;
 
-public class UpdatePasswordViewModel extends ViewModel {
-    // TODO: Implement the ViewModel
+import androidx.annotation.NonNull;
+import androidx.lifecycle.AndroidViewModel;
+
+
+import app.smartmanager.repository.Repository;
+
+public class UpdatePasswordViewModel extends AndroidViewModel {
+    private Repository myRepository;
+
+    public UpdatePasswordViewModel(@NonNull Application application) {
+        super(application);
+    }
+
 }

@@ -149,6 +149,7 @@
             <Button
                 android:id="@+id/buttonLogin"
                 style="@style/RegularButtonStyle"
+                android:background="@drawable/button_pressed_state"
                 android:layout_marginTop="12dp"
                 android:text="@string/login"
                 app:layout_constraintEnd_toEndOf="parent"

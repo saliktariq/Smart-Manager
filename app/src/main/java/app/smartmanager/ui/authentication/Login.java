@@ -1,5 +1,6 @@
 package app.smartmanager.ui.authentication;
 
+import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 
 import android.os.Bundle;
@@ -13,26 +14,26 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import app.smartmanager.R;
+import app.smartmanager.databinding.LoginFragmentBinding;
 
 public class Login extends Fragment {
 
-    private LoginViewModel mViewModel;
-
-    public static Login newInstance() {
-        return new Login();
-    }
+    private LoginViewModel loginViewModel;
+    private LoginFragmentBinding binding;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.login_fragment, container, false);
+        binding = LoginFragmentBinding.inflate(inflater, container, false);
+        View view = binding.getRoot();
+        loginViewModel = new ViewModelProvider(requireActivity()).get(LoginViewModel.class);
+        return view;
     }
 
     @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(LoginViewModel.class);
-        // TODO: Use the ViewModel
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
     }
 
 }

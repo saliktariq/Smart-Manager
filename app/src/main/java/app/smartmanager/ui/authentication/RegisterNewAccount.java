@@ -1,5 +1,6 @@
 package app.smartmanager.ui.authentication;
 
+import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 
 import android.os.Bundle;
@@ -13,26 +14,26 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import app.smartmanager.R;
+import app.smartmanager.databinding.RegisterNewAccountFragmentBinding;
 
 public class RegisterNewAccount extends Fragment {
 
-    private RegisterNewAccountViewModel mViewModel;
-
-    public static RegisterNewAccount newInstance() {
-        return new RegisterNewAccount();
-    }
+    private RegisterNewAccountViewModel registerNewAccountViewModel;
+    private RegisterNewAccountFragmentBinding binding;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.register_new_account_fragment, container, false);
+        binding = RegisterNewAccountFragmentBinding.inflate(inflater,container,false);
+        View view = binding.getRoot();
+        registerNewAccountViewModel = new ViewModelProvider(requireActivity()).get(RegisterNewAccountViewModel.class);
+        return view;
     }
 
     @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(RegisterNewAccountViewModel.class);
-        // TODO: Use the ViewModel
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
     }
 
 }

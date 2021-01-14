@@ -1,7 +1,18 @@
 package app.smartmanager.ui.authentication;
 
-import androidx.lifecycle.ViewModel;
+import android.app.Application;
 
-public class ForgetPasswordViewModel extends ViewModel {
-    // TODO: Implement the ViewModel
+import androidx.annotation.NonNull;
+import androidx.lifecycle.AndroidViewModel;
+
+import app.smartmanager.repository.Repository;
+
+
+public class ForgetPasswordViewModel extends AndroidViewModel {
+    private Repository myRepository;
+
+    public ForgetPasswordViewModel(@NonNull Application application) {
+        super(application);
+    }
+
 }
