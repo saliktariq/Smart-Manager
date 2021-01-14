@@ -10,4 +10,15 @@
     <string name="smart_manager_logo">Smart Manager Logo</string>
     <string name="icon">Icon</string>
     <string name="register_new_account">Register new account</string>
+    <string name="request_new_password">Request new password</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="choose_new_password">Choose new password</string>
+    <string name="don_t_have_authorization_code">Don\'t have authorization code?</string>
+    <string name="request_new_code">Request new code</string>
+    <string name="retype_password">Retype Password</string>
+    <string name="new_password">New Password</string>
+    <string name="authorization_code">Authorization Code</string>
+    <string name="update_account_details">Update account details</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="register">Register</string>
 </resources>
