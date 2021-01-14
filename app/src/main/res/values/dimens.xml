@@ -1,0 +1,16 @@
+<resources>
+
+    <dimen name="normalMargin">8dp</dimen>
+    <dimen name="largeMargin">12dp</dimen>
+    <dimen name="xLargeMargin">16dp</dimen>
+    <dimen name="xxLargeMargin">24dp</dimen>
+
+    <dimen name="normalFont">14sp</dimen>
+    <dimen name="largeFont">16sp</dimen>
+    <dimen name="xlargeFont">18sp</dimen>
+
+    <dimen name="normalElevation">4dp</dimen>
+    <dimen name="largeElevation">12dp</dimen>
+    <dimen name="regularButtonHeight">40dp</dimen>
+
+</resources>

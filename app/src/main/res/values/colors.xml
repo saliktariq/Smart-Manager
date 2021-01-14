@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+<!--    Colour of the app bar-->
+    <color name="colorPrimary">#20C3AF</color>
+    <color name="colorPrimaryDark">#009280</color>
+    <color name="colorPrimaryLight">#67f6e1</color>
+    <color name="colorAccent">#20C3AF</color>
+    <color name="floralWhite">#FFF8F0</color>
+    <color name="minionYellow">#FFE74C</color>
 </resources>
