@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <attr name="colourBackgroundPrimary" format="reference"/>
+    <attr name="colorBgPrimary" format="reference"/>
+    <attr name="colorBgDark" format="reference"/>
 </resources>

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/login"
-        android:name="app.smartmanager.ui.Login"
+        android:name="app.smartmanager.ui.authentication.Login"
         android:label="login_fragment"
         tools:layout="@layout/login_fragment" />
 </navigation>

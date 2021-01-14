@@ -18,23 +18,28 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/appToolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimaryDark"
+            style="@style/ToolbarStyle"
             app:popupTheme="@style/AppTheme.PopupOverlay">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:fontFamily="@font/roboto_medium"
-                android:gravity="center"
-                android:maxLines="1"
-                android:singleLine="true"
-                android:text="@string/login"
-                android:textColor="@color/floralWhite"
-                android:textSize="@dimen/xlargeFont" />
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="48dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@string/login"
+                    android:textColor="@color/floralWhite"
+                    android:textSize="@dimen/xlargeFont" />
+            </RelativeLayout>
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -83,8 +88,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/username"
-                        android:textSize="@dimen/largeFont"
-                        android:textAlignment="viewStart" />
+                        android:textAlignment="viewStart"
+                        android:textSize="@dimen/largeFont" />
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
@@ -95,19 +100,19 @@
                             android:id="@+id/username"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="@dimen/largeFont"
                             android:backgroundTint="#CFE1F3"
                             android:maxLines="1"
-                            android:textAlignment="viewStart" />
+                            android:textAlignment="viewStart"
+                            android:textSize="@dimen/largeFont" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/largeFont"
                         android:layout_marginTop="@dimen/largeMargin"
                         android:text="@string/password"
-                        android:textAlignment="viewStart" />
+                        android:textAlignment="viewStart"
+                        android:textSize="@dimen/largeFont" />
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
@@ -121,10 +126,10 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:backgroundTint="#CFE1F3"
-                            android:textSize="@dimen/largeFont"
                             android:inputType="textPassword"
                             android:maxLines="1"
-                            android:textAlignment="viewStart" />
+                            android:textAlignment="viewStart"
+                            android:textSize="@dimen/largeFont" />
                     </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -141,13 +146,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/normalMargin"
+                android:layout_marginTop="16dp"
                 android:gravity="center"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/buttonLogin">
+                app:layout_constraintTop_toBottomOf="@+id/buttonLogin"
+                app:layout_constraintVertical_bias="0.07999998">
 
                 <LinearLayout
                     android:layout_width="match_parent"

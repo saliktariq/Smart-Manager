@@ -1,4 +1,4 @@
-package app.smartmanager.ui;
+package app.smartmanager.ui.authentication;
 
 import androidx.lifecycle.ViewModelProviders;
 
@@ -14,24 +14,24 @@ import android.view.ViewGroup;
 
 import app.smartmanager.R;
 
-public class Login extends Fragment {
+public class UpdateProfile extends Fragment {
 
-    private LoginViewModel mViewModel;
+    private UpdateProfileViewModel mViewModel;
 
-    public static Login newInstance() {
-        return new Login();
+    public static UpdateProfile newInstance() {
+        return new UpdateProfile();
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.login_fragment, container, false);
+        return inflater.inflate(R.layout.update_profile_fragment, container, false);
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(LoginViewModel.class);
+        mViewModel = ViewModelProviders.of(this).get(UpdateProfileViewModel.class);
         // TODO: Use the ViewModel
     }
 
