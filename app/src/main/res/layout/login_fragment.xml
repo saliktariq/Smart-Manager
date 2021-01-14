@@ -111,7 +111,7 @@
                         android:layout_height="wrap_content"
                         app:hintEnabled="false"
                         app:passwordToggleEnabled="true"
-                        app:passwordToggleTint="@color/colorPrimary">
+                        app:passwordToggleTint="@color/colorPrimaryDark">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/password"
