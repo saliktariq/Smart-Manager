@@ -8,6 +8,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,6 +28,14 @@ public class Login extends Fragment {
         binding = LoginFragmentBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
         loginViewModel = new ViewModelProvider(requireActivity()).get(LoginViewModel.class);
+        binding.buttonLogin.setOnClickListener(view1 -> {
+
+            /*
+            Temporarily skipping authentication check to implement application
+            Authentication will be implemented in due course
+             */
+            Navigation.findNavController(view).navigate(LoginDirections.actionLoginToHomeScreen());
+        });
         return view;
     }
 
