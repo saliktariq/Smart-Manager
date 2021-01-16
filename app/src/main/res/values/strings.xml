@@ -23,4 +23,6 @@
     <string name="register">Register</string>
     <string name="first_time_setup">First time Setup</string>
     <string name="setup_new_thermometer">Setup New Thermometer</string>
+    <string name="thermometer_identification">Thermometer Identification</string>
+    <string name="add_thermometer">Add Thermometer</string>
 </resources>

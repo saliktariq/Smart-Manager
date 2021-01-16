@@ -53,5 +53,11 @@
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="probeList">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginBottom">@dimen/normalMargin</item>
+        <item name="android:paddingLeft">@dimen/normalMargin</item>
+        <item name="android:background">@android:color/holo_green_light</item>
 
+    </style>
 </resources>
