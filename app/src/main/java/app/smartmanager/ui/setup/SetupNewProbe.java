@@ -14,21 +14,19 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import app.smartmanager.R;
-import app.smartmanager.databinding.AppSetupFragmentBinding;
+import app.smartmanager.databinding.SetupNewProbeFragmentBinding;
 
-public class AppSetup extends Fragment {
+public class SetupNewProbe extends Fragment {
 
-    private AppSetupViewModel appSetupViewModel;
-    private AppSetupFragmentBinding binding;
+    private SetupNewProbeViewModel setup_new_probe_fragment;
+    private SetupNewProbeFragmentBinding binding;
+
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        binding = AppSetupFragmentBinding.inflate(inflater,container, false);
+        binding = SetupNewProbeFragmentBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
-        binding.addNewProbeButton.setOnClickListener( view1 -> {
-            Navigation.findNavController(view).navigate(AppSetupDirections.actionAppSetupToSetupNewProbe());
-        });
         return view;
     }
 

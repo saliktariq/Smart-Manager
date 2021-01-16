@@ -22,4 +22,5 @@
     <string name="update_profile">Update Profile</string>
     <string name="register">Register</string>
     <string name="first_time_setup">First time Setup</string>
+    <string name="setup_new_thermometer">Setup New Thermometer</string>
 </resources>

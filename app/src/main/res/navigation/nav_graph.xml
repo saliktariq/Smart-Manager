@@ -79,5 +79,14 @@
         android:id="@+id/appSetup"
         android:name="app.smartmanager.ui.setup.AppSetup"
         android:label="AppSetup"
-        tools:layout="@layout/app_setup_fragment"/>
+        tools:layout="@layout/app_setup_fragment">
+        <action
+            android:id="@+id/action_appSetup_to_setupNewProbe"
+            app:destination="@id/setupNewProbe" />
+    </fragment>
+    <fragment
+        android:id="@+id/setupNewProbe"
+        android:name="app.smartmanager.ui.setup.SetupNewProbe"
+        android:label="SetupNewProbe"
+        tools:layout="@layout/setup_new_probe_fragment"/>
 </navigation>
