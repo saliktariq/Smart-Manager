@@ -13,26 +13,25 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import app.smartmanager.R;
+import app.smartmanager.databinding.HomeScreenFragmentBinding;
 
 public class HomeScreen extends Fragment {
 
-    private HomeScreenViewModel mViewModel;
-
-    public static HomeScreen newInstance() {
-        return new HomeScreen();
-    }
+    private HomeScreenViewModel homeScreenViewModel;
+    private HomeScreenFragmentBinding binding;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.home_screen_fragment, container, false);
+       binding = HomeScreenFragmentBinding.inflate(inflater,container,false);
+       View view = binding.getRoot();
+       return view;
     }
 
     @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(HomeScreenViewModel.class);
-        // TODO: Use the ViewModel
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
     }
 
 }
