@@ -151,7 +151,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/buttonAddThermometer"
-                app:layout_constraintBottom_toTopOf="@id/bottom"/>
+                app:layout_constraintBottom_toTopOf="@id/bottomLinearLayout"/>
 
 
 

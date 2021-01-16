@@ -8,6 +8,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +17,7 @@ import android.view.ViewGroup;
 
 import app.smartmanager.R;
 import app.smartmanager.databinding.SetupNewProbeFragmentBinding;
+import app.smartmanager.helper.MyApplication;
 
 public class SetupNewProbe extends Fragment {
 
@@ -27,6 +30,10 @@ public class SetupNewProbe extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         binding = SetupNewProbeFragmentBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
+        RecyclerView recyclerView = binding.addNewProbeRecyclerView;
+        final NewProbeListAdapter adapter = new NewProbeListAdapter(new NewProbeListAdapter.ProbeDiff());
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(MyApplication.getContext()));
         return view;
     }
 
