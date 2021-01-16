@@ -34,7 +34,7 @@ public class Login extends Fragment {
             Temporarily skipping authentication check to implement application
             Authentication will be implemented in due course
              */
-            Navigation.findNavController(view).navigate(LoginDirections.actionLoginToHomeScreen());
+            Navigation.findNavController(view).navigate(LoginDirections.actionLoginToAppSetup());
         });
         return view;
     }

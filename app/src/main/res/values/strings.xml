@@ -21,4 +21,5 @@
     <string name="update_account_details">Update account details</string>
     <string name="update_profile">Update Profile</string>
     <string name="register">Register</string>
+    <string name="first_time_setup">First time Setup</string>
 </resources>

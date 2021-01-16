@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/floralWhite"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/applicationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/appToolbar"
+            style="@style/ToolbarStyle"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="48dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@string/first_time_setup"
+                    android:textColor="@color/floralWhite"
+                    android:textSize="@dimen/xlargeFont" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/applicationBar"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/addProbeTickMark"
+                android:visibility="gone"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="@dimen/normalMargin"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/ic_assignment_turned_in_black_24dp"
+                app:layout_constraintEnd_toStartOf="@id/addNewProbeButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <Button
+                android:id="@+id/addNewProbeButton"
+                style="@style/RegularButtonStyle"
+                android:layout_width="250dp"
+                android:layout_height="@dimen/regularButtonHeight"
+                android:layout_marginTop="@dimen/xxLargeMargin"
+                android:text="Setup new Probe Thermometer"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/addProbeTickMark"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/addNewSupplierTickMark"
+                android:visibility="gone"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="@dimen/normalMargin"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/ic_assignment_turned_in_black_24dp"
+                app:layout_constraintEnd_toStartOf="@id/addNewSupplierButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/addProbeTickMark"
+
+                />
+
+            <Button
+                android:id="@+id/addNewSupplierButton"
+                style="@style/RegularButtonStyle"
+                android:layout_width="250dp"
+                android:layout_height="@dimen/regularButtonHeight"
+                android:layout_marginTop="@dimen/xLargeMargin"
+                android:text="Add new Supplier"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/addNewSupplierTickMark"
+                app:layout_constraintTop_toBottomOf="@id/addNewProbeButton" />
+
+            <ImageView
+                android:id="@+id/addNewProductTickMark"
+                android:layout_width="30dp"
+                android:visibility="gone"
+                android:layout_height="30dp"
+                android:layout_marginStart="@dimen/normalMargin"
+                android:layout_marginTop="@dimen/imageInVerticalStack"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/ic_assignment_turned_in_black_24dp"
+                app:layout_constraintEnd_toStartOf="@id/addNewProductButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/addNewSupplierTickMark"
+
+                />
+
+            <Button
+                android:id="@+id/addNewProductButton"
+                style="@style/RegularButtonStyle"
+                android:layout_width="250dp"
+                android:layout_height="@dimen/regularButtonHeight"
+                android:layout_marginTop="@dimen/xLargeMargin"
+                android:text="Add new Product"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/addNewProductTickMark"
+                app:layout_constraintTop_toBottomOf="@id/addNewSupplierButton" />
+
+
+            <LinearLayout
+                android:id="@+id/bottomLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <Button
+                    style="@style/RegularButtonStyle"
+                    android:layout_width="150dp"
+                    android:layout_height="@dimen/regularButtonHeight"
+                    android:background="@color/minionYellow"
+                    android:text="Logout"
+                    android:textColor="@color/colorPrimaryDark" />
+
+                <TextView
+                    style="@style/RegularFontStyle"
+                    android:layout_margin="@dimen/xLargeMargin"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Any issues with the application?" />
+
+                <TextView
+                    android:id="@+id/btnContactAdmin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/largeMargin"
+                    android:layout_marginBottom="@dimen/xLargeMargin"
+                    android:text="Contact Support"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/normalFont" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

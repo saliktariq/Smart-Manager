@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_login_to_registerNewAccount"
             app:destination="@id/registerNewAccount" />
+        <action
+            android:id="@+id/action_login_to_appSetup"
+            app:destination="@id/appSetup" />
     </fragment>
     <fragment
         android:id="@+id/registerNewAccount"
@@ -72,4 +75,9 @@
             app:destination="@id/forgetPassword" />
     </fragment>
     <action android:id="@+id/action_global_login" app:destination="@id/login" />
+    <fragment
+        android:id="@+id/appSetup"
+        android:name="app.smartmanager.ui.setup.AppSetup"
+        android:label="AppSetup"
+        tools:layout="@layout/app_setup_fragment"/>
 </navigation>
